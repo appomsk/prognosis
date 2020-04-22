@@ -73,7 +73,7 @@ def filepath(url):
     if not os.path.exists(d):
         os.mkdir(d)
 
-    date = str(datetime.datetime.now()).split()[0]
+    date = str(datetime.date.today())
 
     t = re.search(r'/country/(.*)/$', url)
     country = t[1] if t else 'world'
