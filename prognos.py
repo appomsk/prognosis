@@ -12,12 +12,13 @@ import process
 
 def prognos(df, colname, window_size):
     pname = cfg.mkcol_p(colname)
+    diffname = cfg.mkcol_diff(colname)
     ppname = cfg.mkcol_pp(colname)
     avename = cfg.mkcol_avepp(colname)
     datename = cfg.dates
 
     data = {}
-    for k in (datename, colname, pname, ppname):
+    for k in (datename, colname, diffname, pname, ppname):
         data[k] = list(df[k][len(df)-window_size:])
 
     dates = []
@@ -40,6 +41,8 @@ def prognos(df, colname, window_size):
         r = math.ceil(math.log10(col))
         col = int(round(col, -r+3))
         data[colname].append(col)
+
+        data[diffname].append(col - data[colname][-2])
 
         colpp = (sum(data[ppname][i:i+window_size])+colpp)/(window_size+1)
         data[ppname].append(colpp)

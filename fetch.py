@@ -49,7 +49,7 @@ def mining(content):
             rst[cfg.dates] = []
             for d in s.split(','):
                 t = datetime.datetime.strptime("2020" + d, "%Y%b %d")
-                t = datetime.date(t.year, t.month, t.day)
+                t = str(datetime.date(t.year, t.month, t.day))
                 rst[cfg.dates].append(t)
         rst[names[title]] = map(int, it[2].split(','))
 
