@@ -16,7 +16,7 @@ deaths = 'Deaths'
 dates = 'Dates'
 fetcheddf_order = [dates, cases, active, deaths]
 
-datadir = 'Data'
+datadir = '../Data'
 
 mkcol_diff = lambda col: col + 'D'
 mkcol_p    = lambda col: col + '%'

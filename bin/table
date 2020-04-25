@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python3 process.py | less -S
+python3 lib/process.py | less -S
