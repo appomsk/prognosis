@@ -7,6 +7,8 @@ https://www.worldometers.info/coronavirus/country/czech-republic/
 https://www.worldometers.info/coronavirus/country/sweden/
 '''.split()
 
+url_more = 'https://www.worldometers.info/coronavirus/worldwide-graphs/'
+
 world_url = urls[0]
 prefix_url = 'https://www.worldometers.info/coronavirus/country/'
 
